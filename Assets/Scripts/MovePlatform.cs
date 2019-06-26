@@ -24,7 +24,7 @@ public class MovePlatform : MonoBehaviour
     void Update()
     {
         float step =  speed * _direction * Time.deltaTime; // calculate distance to move
-        transform.position = Vector3.MoveTowards(transform.position, endPos, Mathf.Sin(step));
+        transform.position = Vector3.MoveTowards(transform.position, endPos, step);
         flip_direction();
 
         // Speed up controls
